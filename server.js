@@ -16,9 +16,10 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-// Router
-// let apiRouter = express.Router();
-// app.use('/block', apiRouter);
+
+app.post("/requestValidation", async (req, res) => { // Your code });
+
+
 
 // Get a Block
 app.get('/block/:height', async (req, res) => {
